@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ffphoto" id="gTV-IL-0wX" customClass="FFPhotoCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h6F-aA-pGx">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    </imageView>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ffnormal.png" highlightedImage="ffselected.png" translatesAutoresizingMaskIntoConstraints="NO" id="DES-ST-0lO">
+                        <rect key="frame" x="80" y="0.0" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="KZp-af-A9u"/>
+                            <constraint firstAttribute="width" constant="20" id="RMx-O4-tpS"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DES-ST-0lO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6ot-4g-OAB"/>
+                <constraint firstItem="h6F-aA-pGx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Bq6-Ux-t0i"/>
+                <constraint firstAttribute="trailing" secondItem="h6F-aA-pGx" secondAttribute="trailing" id="Woi-PB-1wy"/>
+                <constraint firstAttribute="bottom" secondItem="h6F-aA-pGx" secondAttribute="bottom" id="eTg-SY-YTb"/>
+                <constraint firstItem="h6F-aA-pGx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="miR-qy-MZH"/>
+                <constraint firstAttribute="trailing" secondItem="DES-ST-0lO" secondAttribute="trailing" id="yRW-gY-9Lx"/>
+            </constraints>
+            <connections>
+                <outlet property="flagImgView" destination="DES-ST-0lO" id="2hu-Ux-ko4"/>
+                <outlet property="photoImgView" destination="h6F-aA-pGx" id="u1C-dV-tgo"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ffnormal.png" width="40" height="40"/>
+        <image name="ffselected.png" width="40" height="40"/>
+    </resources>
+</document>
